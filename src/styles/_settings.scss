@@ -148,6 +148,10 @@ $fontPlay: "Play";
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $fontInt;
   background: $colorNavbar;

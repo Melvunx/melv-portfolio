@@ -14,7 +14,7 @@ const Home = () => {
     <div>
       <Navigation />
       <AnimatedBg />
-      <main>
+      <main id="main">
         <h2>
           Bienvenue sur mon portfolio{" "}
           <span className="fa-icon">{icon.idCard}</span>

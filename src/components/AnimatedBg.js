@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownLong } from "@fortawesome/free-solid-svg-icons";
 
 const AnimatedBg = () => {
+  const icon = {
+    arrow: <FontAwesomeIcon icon={faDownLong} />,
+  };
   const [currentWordIndex, setCurrentWordIndex] = useState(0); // Index du mot courant
   const [letterIndex, setLetterIndex] = useState(0); // Index de la lettre courante
   const [currentLetters, setCurrentLetters] = useState(""); // Lettres actuelles affichées
@@ -56,6 +61,7 @@ const AnimatedBg = () => {
       <div id="target">
         <h1>Je suis {currentLetters}</h1>
       </div>
+      <a href="#main">{icon.arrow}</a>
     </div>
   );
 };
