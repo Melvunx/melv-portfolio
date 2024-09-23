@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/melv-portfolio/static/css/main.56cb3fc3.css",
-    "main.js": "/melv-portfolio/static/js/main.d16b4fe2.js",
+    "main.js": "/melv-portfolio/static/js/main.0278a2ff.js",
     "static/media/starmation-video.mp4": "/melv-portfolio/static/media/starmation-video.32368a7fe71212643419.mp4",
     "static/media/resto-video.mp4": "/melv-portfolio/static/media/resto-video.b3e8c56a9b16ca2e88bd.mp4",
     "static/media/gaming-campus-video.mp4": "/melv-portfolio/static/media/gaming-campus-video.15f85a67fe4b716315f2.mp4",
@@ -29,10 +29,10 @@
     "static/media/Bubble-shooter-img.png": "/melv-portfolio/static/media/Bubble-shooter-img.11d6e51d1830ec1d762f.png",
     "index.html": "/melv-portfolio/index.html",
     "main.56cb3fc3.css.map": "/melv-portfolio/static/css/main.56cb3fc3.css.map",
-    "main.d16b4fe2.js.map": "/melv-portfolio/static/js/main.d16b4fe2.js.map"
+    "main.0278a2ff.js.map": "/melv-portfolio/static/js/main.0278a2ff.js.map"
   },
   "entrypoints": [
     "static/css/main.56cb3fc3.css",
-    "static/js/main.d16b4fe2.js"
+    "static/js/main.0278a2ff.js"
   ]
 }
