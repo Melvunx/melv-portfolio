@@ -18,6 +18,7 @@ $gradientBlueWhite: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
 $gradientCard: linear-gradient(to right, #8e9eab, #eef2f3);
 $marginCenter: 0 auto;
 $regularTransition: all 0.3s linear;
+$easeout: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 
 @font-face {
   font-family: "Bruno";
@@ -79,7 +80,7 @@ $fontPlay: "Play";
 @mixin regularFont {
   font-size: 0.9rem;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 550;
   line-height: 25px;
 }
 
@@ -136,6 +137,15 @@ $fontPlay: "Play";
   @include columnFlex;
   width: 100%;
   gap: 15px;
+}
+
+@mixin bubble {
+  box-shadow: $boxShadowCard;
+  background: $colorCard;
+  border-radius: 12px;
+  min-height: 100px;
+  padding: 14px;
+  width: 80%;
 }
 
 * {

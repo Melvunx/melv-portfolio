@@ -46,7 +46,7 @@ const AnimatedBg = () => {
       } else {
         removeLetters();
       }
-    }, 90); // Intervalle entre chaque lettre
+    }, 70); // Intervalle entre chaque lettre
 
     // Nettoyage de l'effet lorsqu'il change
     return () => clearTimeout(intervalId);

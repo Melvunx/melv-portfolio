@@ -2,7 +2,7 @@ main {
   background: $gradientCard;
   @include columnFlex;
   gap: 15px;
-  min-height: 100vh;
+  min-height: 90vh;
   position: relative;
   padding-bottom: 5px;
 
@@ -31,11 +31,23 @@ main {
     @include columnFlex;
     grid-gap: 15px;
     @include regularFont;
+    font-size: 0.95rem;
     font-family: $fontDos;
+
+    .bubble-title {
+      font-family: $fontMerri;
+      font-size: 1.2rem;
+      width: 175px;
+      text-align: center;
+      margin: $marginCenter;
+      padding: 5px 3px;
+      background: $colorG2;
+      border-radius: 10px;
+    }
 
     .info-content-top {
       display: grid;
-      grid-template-columns: 30% 70%;
+      grid-template-columns: 20% 80%;
 
       @media screen and (max-width: 810px) {
         @include columnFlex;
@@ -43,29 +55,8 @@ main {
 
       .img-container {
         @include imgContainer;
-        @include columnFlex;
-        justify-content: space-evenly;
         margin: $marginCenter;
         width: 90%;
-
-        @media screen and (max-width: 810px) {
-          gap: 10px;
-          margin-bottom: 10px;
-        }
-
-        img,
-        span {
-          margin-left: 50px;
-
-          @media screen and (max-width: 810px) {
-            margin-left: 0;
-          }
-        }
-
-        span {
-          font-size: 1.1rem;
-          font-weight: 500;
-        }
 
         img {
           width: 50%;
@@ -79,82 +70,97 @@ main {
         }
       }
 
-      // .intro-right {
-      //   @include columnFlex;
-      //   width: 86%;
-      //   gap: 10px;
+      .about-me-container {
+        @include bubble;
+        padding: 20px;
+        width: 82.5%;
+        display: grid;
+        grid-template-columns: 50% 50%;
 
-      //   .intro-part {
-      //     display: flex;
-      //     background: $colorCard;
-      //     box-shadow: $boxShadowCard;
-      //     border-radius: 15px;
-      //     gap: 15px;
+        & > .anim-intro {
+          animation: glowIn 1.4s $easeout forwards;
 
-      //     @media screen and (max-width: 1260px) {
-      //       font-size: 0.8rem;
-      //       line-height: 22px;
-      //     }
+          @keyframes glowIn {
+            to {
+              background: $colorW;
+            }
+          }
+        }
 
-      //     @media screen and (max-width: 1140px) {
-      //       padding: 15px;
-      //     }
+        .introduction {
+          @include columnFlex;
+          gap: 10px;
+          background: transparent;
+          padding: 10px 5px;
+          border-radius: 12px;
 
-      //     @media screen and (max-width: 810px) {
-      //       line-height: 25px;
-      //       font-size: 1rem;
-      //     }
+          &:hover {
+            animation: colorInOc 0.6s 1.6s $easeout forwards;
 
-      //     img {
-      //       width: 160px;
-      //       height: 125px;
-      //       border-radius: 15px 0 0 15px;
+            animation: colorInDp 0.6s 1.9s $easeout forwards;
+          }
 
-      //       @media screen and (max-width: 1260px) {
-      //         width: 140px;
-      //         height: 115px;
-      //       }
+          p {
+            width: 90%;
+            text-align: center;
+          }
 
-      //       @media screen and (max-width: 1140px) {
-      //         display: none;
-      //       }
-      //     }
+          ul.information {
+            display: flex;
+            flex-direction: column;
 
-      //     .text-content {
-      //       @include flexContainer;
-      //       p {
-      //         text-align: center;
+            li {
+              h5 {
+                font-size: 0.9rem;
 
-      //         span#open-classroom, span#from-scratch {
-      //           font-weight: 700;
-      //         }
+                span {
+                  text-decoration: none;
+                  transition: $regularTransition;
+                }
 
-      //         span#open-classroom {
-      //           color: $colorOc;
-      //         }
+                span.anim-info {
+                  position: relative;
+                  animation: wordColorIn 0.8s 1s $easeout forwards;
 
-      //         span#from-scratch {
-      //           color: $colorFs;
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
+                  @keyframes wordColorIn {
+                    to {
+                      color: $colorO;
+                    }
+                  }
+
+                  &::after {
+                    content: "";
+                    background: $colorO;
+                    position: absolute;
+                    border-radius: 10px;
+                    width: 0;
+                    height: 2px;
+                    left: 0;
+                    bottom: -2px;
+                    animation: underlineIn 0.8s 1s $easeout forwards;
+                    transform-origin: left;
+                  }
+
+                  @keyframes underlineIn {
+                    to {
+                      width: 98%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     .intro-card {
       @include flexContainer;
-      background: $colorCard;
-      box-shadow: $boxShadowCard;
-      padding: 14px;
-      border-radius: 12px;
-      width: 80%;
-      min-height: 150px;
+      @include bubble;
 
       @media screen and (max-width: 810px) {
         min-width: 83%;
       }
-
 
       p {
         font-size: 1rem;
