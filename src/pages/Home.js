@@ -9,6 +9,16 @@ const icon = {
   idCard: <FontAwesomeIcon icon={faIdCard} />,
 };
 
+const information = [
+  {
+    objectif: "Recherche d'une alternance en informatique",
+    delay: "12 mois",
+    rythme: "4 jours en entreprise et 1 jour de formation",
+    sectors: ["Industrie", "Banque", "Conseil"],
+    localisation: "Île-de-France",
+  },
+];
+
 const Home = () => {
   return (
     <div>
@@ -23,13 +33,52 @@ const Home = () => {
           <div className="info-content-top">
             <div className="img-container">
               <img src="./img/header-img.jpg" alt="head img" />
-              <span>Je m'appelle Melvin !</span>
+              <span>Qui suis-je ?</span>
             </div>
-            <div className="intro-right">
+            <div className="about-me-container">
+              {information.map((info) => {
+                return (
+                  <div className="information" key={info.objectif}>
+                    <ul>
+                      <li>
+                        <h5>Objectif : {info.objectif}</h5>{" "}
+                      </li>
+                      <li>
+                        {" "}
+                        <h5>Durée : {info.delay}</h5>
+                      </li>
+                      <li>
+                        <h5>Rythme: {info.rythme}</h5>
+                      </li>
+                      <li>
+                        <h5>Localisation : {info.localisation}</h5>
+                      </li>
+                      <li className="sectors">
+                        {" "}
+                        Secteurs :
+                        {info.sectors.sort().map((sector, id) => {
+                          return <h5 key={id}>{sector}</h5>;
+                        })}
+                      </li>
+                    </ul>
+                  </div>
+                );
+              })}
+              <div className="parcours">
+                <h3 className="bubble-title">Mon parcours</h3>
+                <p>
+                  Mon parcours a commencé par une formation en tant
+                  qu'ingénieur, mais c'est au fil de mes études que j'ai
+                  découvert une véritable passion pour l'informatique, et plus
+                  particulièrement pour le développement web.
+                </p>
+              </div>
+            </div>
+            {/* <div className="intro-right">
               <div className="intro-part">
                 <img src="./img/formation-pic.avif" alt="infos img" />
-
                 <div className="text-content">
+                  <h3 className="bubble-title">Qui suis-je ?</h3>
                   <p>
                     Je suis étudiant en informatique inscrit sur{" "}
                     <span id="open-classroom">Open Classroom</span> et je suis
@@ -45,6 +94,7 @@ const Home = () => {
               <div className="intro-part">
                 <img src="./img/computer-img.avif" alt="computer" />
                 <div className="text-content">
+                  // <h3 className="bubble-title">Mon parcours</h3>
                   <p>
                     Je me suis orienté vers le développement web, notament en
                     full stack afin de travailler sur des projets de la
@@ -56,9 +106,10 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="intro-card">
+            <h3 className="bubble-title">Pourquoi moi ?</h3>
             <p>
               Je souhaite poursuivre mon apprentissage en{" "}
               <span id="alternance">alternance</span> au sein d'une entreprise

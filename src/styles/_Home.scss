@@ -79,67 +79,67 @@ main {
         }
       }
 
-      .intro-right {
-        @include columnFlex;
-        width: 86%;
-        gap: 10px;
+      // .intro-right {
+      //   @include columnFlex;
+      //   width: 86%;
+      //   gap: 10px;
 
-        .intro-part {
-          display: flex;
-          background: $colorCard;
-          box-shadow: $boxShadowCard;
-          border-radius: 15px;
-          gap: 15px;
+      //   .intro-part {
+      //     display: flex;
+      //     background: $colorCard;
+      //     box-shadow: $boxShadowCard;
+      //     border-radius: 15px;
+      //     gap: 15px;
 
-          @media screen and (max-width: 1260px) {
-            font-size: 0.8rem;
-            line-height: 22px;
-          }
+      //     @media screen and (max-width: 1260px) {
+      //       font-size: 0.8rem;
+      //       line-height: 22px;
+      //     }
 
-          @media screen and (max-width: 1140px) {
-            padding: 15px;
-          }
+      //     @media screen and (max-width: 1140px) {
+      //       padding: 15px;
+      //     }
 
-          @media screen and (max-width: 810px) {
-            line-height: 25px;
-            font-size: 1rem;
-          }
+      //     @media screen and (max-width: 810px) {
+      //       line-height: 25px;
+      //       font-size: 1rem;
+      //     }
 
-          img {
-            width: 160px;
-            height: 125px;
-            border-radius: 15px 0 0 15px;
+      //     img {
+      //       width: 160px;
+      //       height: 125px;
+      //       border-radius: 15px 0 0 15px;
 
-            @media screen and (max-width: 1260px) {
-              width: 140px;
-              height: 115px;
-            }
+      //       @media screen and (max-width: 1260px) {
+      //         width: 140px;
+      //         height: 115px;
+      //       }
 
-            @media screen and (max-width: 1140px) {
-              display: none;
-            }
-          }
+      //       @media screen and (max-width: 1140px) {
+      //         display: none;
+      //       }
+      //     }
 
-          .text-content {
-            @include flexContainer;
-            p {
-              text-align: center;
+      //     .text-content {
+      //       @include flexContainer;
+      //       p {
+      //         text-align: center;
 
-              span#open-classroom, span#from-scratch {
-                font-weight: 700;
-              }
+      //         span#open-classroom, span#from-scratch {
+      //           font-weight: 700;
+      //         }
 
-              span#open-classroom {
-                color: $colorOc;
-              }
+      //         span#open-classroom {
+      //           color: $colorOc;
+      //         }
 
-              span#from-scratch {
-                color: $colorFs;
-              }
-            }
-          }
-        }
-      }
+      //         span#from-scratch {
+      //           color: $colorFs;
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
     }
 
     .intro-card {

@@ -143,7 +143,7 @@
         #linkedin,
         #github,
         #cv {
-          transition: all 0.3s linear;
+          transition: $regularTransition;
           font-size: 1.2rem;
         }
 
@@ -225,11 +225,11 @@
         #iconEmail,
         #iconPhone {
           position: absolute;
-          transition: all 0.3s linear;
+          transition: $regularTransition;
 
           &:hover {
             color: $colorO;
-            transition: all 0.3s linear;
+            transition: $regularTransition;
             transform: scale(1.2);
           }
 

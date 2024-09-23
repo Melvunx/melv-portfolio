@@ -14,11 +14,7 @@ const AnimatedBg = () => {
   useEffect(() => {
     const words = [
       "un développeur full-stack junior",
-      "un martiniquais",
-      "un passionné",
-      "créatif",
-      "motivé",
-      "en  recherche d'alternance !",
+      "l'alternant qu'il vous faut !",
     ];
 
     const addLetter = () => {
@@ -50,7 +46,7 @@ const AnimatedBg = () => {
       } else {
         removeLetters();
       }
-    }, 100); // Intervalle entre chaque lettre
+    }, 90); // Intervalle entre chaque lettre
 
     // Nettoyage de l'effet lorsqu'il change
     return () => clearTimeout(intervalId);

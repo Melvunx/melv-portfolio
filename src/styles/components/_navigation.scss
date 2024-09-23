@@ -5,6 +5,7 @@
   justify-content: space-around;
   align-items: center;
 
+
   h3 {
     font-family: $fontBru;
     font-size: 1.1em;
@@ -97,7 +98,7 @@
 .nav-down {
   transition: all 0.4s linear;
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   width: 100%;
 }
 
