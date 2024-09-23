@@ -1,0 +1,134 @@
+.navigation {
+  display: flex;
+  background: $colorNavbar;
+  padding: 15px 0;
+  justify-content: space-around;
+  align-items: center;
+
+  h3 {
+    font-family: $fontBru;
+    font-size: 1.1em;
+    background: $gradientBlueWhite;
+    background-size: 400%;
+    background-position: left;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleAnim 10s ease-in infinite;
+
+    @keyframes titleAnim {
+      50% {
+        background-position: right;
+      }
+      100% {
+        background-position: left;
+      }
+    }
+
+    @media  screen and (max-width: 1150px) {
+      font-size: 0.8rem;
+    }
+
+    @media  screen and (max-width: 820px) {
+      display: none;
+    }
+
+  }
+
+  .navbar {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: 820px) {
+      width: 100%;
+    }
+
+    a {
+      font-size: 1.1rem;
+      font-family: $fontExo;
+      padding: 10px;
+      text-transform: capitalize;
+
+      @media screen and (max-width: 550px) {
+        font-size: 0.8rem;
+      }
+
+      li {
+        color: $colorW;
+        transition: 0.3s;
+
+        &:hover {
+          color: $colorHover;
+        }
+      }
+    }
+
+    .nav-active {
+      position: relative;
+
+      li {
+        color: $colorHover;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        background: $colorHover;
+        border-radius: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5px;
+        animation: navAnime 1s ease forwards;
+        animation-delay: 0.15s;
+      }
+
+      @keyframes navAnime {
+        to {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+.nav-up,
+.nav-down {
+  transition: all 0.4s linear;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+
+.nav-up {
+  top: 0;
+  background: $colorNavbar;
+  padding: 10px 0;
+
+  h3 {
+    opacity: 1;
+  }
+
+  .navbar {
+    a li {
+      color: $colorW; // Couleur des liens
+    }
+  }
+}
+
+.nav-down {
+  top: -100px; // Cache la navbar en scrollant vers le bas
+  padding: 0;
+  background: transparent;
+
+  h3 {
+    opacity: 0.2;
+  }
+
+  .navbar {
+    a li {
+      color: transparent;
+    }
+  }
+}

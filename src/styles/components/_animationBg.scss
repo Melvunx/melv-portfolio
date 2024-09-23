@@ -1,0 +1,54 @@
+.bg-animation {
+  min-height: 100vh;
+  @include flexContainer;
+  background: $colorB2;
+
+  #target {
+    h1 {
+      @include regularFont;
+      font-family: $fontPlay;
+      font-size: 3.5rem;
+      color: $colorW;
+      position: relative;
+      cursor: default;
+
+      &::selection {
+        background: none;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 4.3rem;
+        width: 5px;
+        background: $colorW;
+        transform: translateY(-18px);
+        right: -10px;
+        top: 0;
+        animation: caretAnim 0.8s linear infinite;
+      }
+
+      @keyframes caretAnim {
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: 1050px) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 660px) {
+        text-align: center;
+        line-height: 50px;
+        &::after {
+          content: "";
+          display: none;
+        }
+      }
+    }
+  }
+}

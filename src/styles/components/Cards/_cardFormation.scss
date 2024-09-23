@@ -1,0 +1,44 @@
+.formations {
+  @include container;
+  padding-top: 80px;
+
+  .card-formation {
+    @include cardContainer;
+
+    @media screen and (max-width: 685px) {
+      width: 300px;
+    }
+
+    .card-formation-content {
+      @include cardContent;
+
+      @media screen and (max-width: 685px) {
+        h2 {
+          text-align: center;
+          font-size: 1.1rem;
+        }
+      }
+
+      p {
+        @include paragraphCard;
+      }
+
+      h4 {
+        @include h4Card;
+        font-size: 0.9rem;
+        @media screen and (max-width: 685px) {
+          text-align: center;
+        }
+      }
+
+      span.date {
+        @include spanCard;
+        right: 5%;
+
+        @media screen and (max-width: 685px) {
+          right: 16.5%;
+        }
+      }
+    }
+  }
+}

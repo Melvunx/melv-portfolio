@@ -1,0 +1,185 @@
+$colorW: #ffff;
+$colorFilterBar: #ecececf2;
+$colorB: #000;
+$colorB2: #121d22;
+$colorB3: rgba(51, 65, 85, 1);
+$colorG2: lightgrey;
+$colorR: crimson;
+$colorO: orangered;
+$colorL: lightgreen;
+$colorCard: rgb(236, 236, 236);
+$colorNavbar: rgb(63, 60, 72);
+$colorHover: #78d3e7;
+$colorOc: rgb(116, 81, 235);
+$colorFs: rgb(4, 191, 211);
+$boxShadowCard: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+$gradientBlueWhite: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+$gradientCard: linear-gradient(to right, #8e9eab, #eef2f3);
+$marginCenter: 0 auto;
+
+@font-face {
+  font-family: "Bruno";
+  src: url(../assets/fonts/BrunoAceSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url(../assets/fonts/Dosis-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url(../assets/fonts/Exo2-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/InterTight-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Merri";
+  src: url(../assets/fonts/MerriweatherSans-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Oxy";
+  src: url(../assets/fonts/Oxygen-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Play";
+  src: url(../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+$fontBru: "Bruno";
+$fontDos: "Dosis";
+$fontExo: "Exo";
+$fontInt: "Inter";
+$fontMerri: "Merri";
+$fontOxy: "Oxy";
+$fontPlay: "Play";
+
+@mixin flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin columnFlex {
+  @include flexContainer;
+  flex-direction: column;
+}
+
+@mixin imgContainer {
+  width: 100%;
+  object-fit: cover;
+  @include flexContainer;
+}
+
+@mixin regularFont {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+@mixin paragraphCard {
+  @include regularFont;
+  font-size: 1rem;
+  font-weight: 450;
+  text-align: center;
+  width: 80%;
+}
+
+@mixin spanCard {
+  font-family: $fontMerri;
+  position: absolute;
+  bottom: 3%;
+  right: 4%;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+@mixin h4Card {
+  font-family: $fontMerri;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+
+@mixin container {
+  @include columnFlex;
+  width: 85%;
+  padding: 20px 0;
+  margin: $marginCenter;
+  gap: 25px;
+}
+
+@mixin cardContainer {
+  @include flexContainer;
+  @include card;
+  background: $colorG2;
+  overflow: hidden;
+  width: 500px;
+  height: 220px;
+  gap: 10px;
+}
+
+@mixin card {
+  background: $colorCard;
+  padding: 15px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: $boxShadowCard;
+}
+
+@mixin cardContent {
+  @include columnFlex;
+  width: 100%;
+  gap: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &::selection {
+    background: $colorHover;
+    color: $colorW;
+  }
+}
+
+body {
+  font-family: $fontInt;
+  background: $colorNavbar;
+}
+
+.background-section {
+  width: 100%;
+  --s: 25px;
+
+  --c: #0000, #282828 0.5deg 119.5deg, #0000 120deg;
+  --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
+  --g2: conic-gradient(from 180deg at 43.75% calc(425% / 6), var(--c));
+  --g3: conic-gradient(from -60deg at 50% calc(175% / 12), var(--c));
+  background: var(--g1), var(--g1) var(--s) calc(1.73 * var(--s)), var(--g2),
+    var(--g2) var(--s) calc(1.73 * var(--s)), var(--g3) var(--s) 0,
+    var(--g3) 0 calc(1.73 * var(--s)) #1e1e1e;
+  background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $colorB;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  cursor: default;
+}
+
+h2 {
+  font-family: $fontMerri;
+}

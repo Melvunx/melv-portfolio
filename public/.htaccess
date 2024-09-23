@@ -1,0 +1,9 @@
+# Assurez-vous que le module mod_rewrite est activé sur votre serveur
+RewriteEngine On
+
+# Si le fichier ou le dossier existe, laisse Apache gérer la requête
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Sinon, redirige tout vers index.html
+RewriteRule ^.*$ /index.html [L,QSA]

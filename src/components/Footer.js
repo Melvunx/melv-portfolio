@@ -1,0 +1,81 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+import {
+  faEnvelope,
+  faMobileScreenButton,
+  faComments,
+  faUser,
+  faFilePdf,
+} from "@fortawesome/free-solid-svg-icons";
+
+const icon = {
+  envelope: <FontAwesomeIcon icon={faEnvelope} />,
+  phone: <FontAwesomeIcon icon={faMobileScreenButton} />,
+  comments: <FontAwesomeIcon icon={faComments} />,
+  user: <FontAwesomeIcon icon={faUser} />,
+  github: <FontAwesomeIcon icon={faGithub} />,
+  linkedIn: <FontAwesomeIcon icon={faLinkedin} />,
+  pdf: <FontAwesomeIcon icon={faFilePdf} />,
+};
+
+const Footer = () => {
+  return (
+    <div className="footer">
+      <div className="link-container">
+        <h3>
+          Mes liens <span>{icon.user}</span>
+        </h3>
+        <ul className="links">
+          <li>
+            <a
+              id="linkedin"
+              href="https://www.linkedin.com/in/melvin-augustine/"
+            >
+              <span>{icon.linkedIn}</span>
+            </a>
+            <h5 className="icon-name">LinkedIn</h5>
+          </li>
+          <li>
+            <a id="github" href="https://github.com/Melvunx">
+              <span className="fa-icon">{icon.github}</span>
+            </a>
+            <h5 className="icon-name">Github</h5>
+          </li>
+          <li>
+            <a id="cv" href="cv.pdf" download="cv.pdf">
+              <span className="fa-icon">{icon.pdf}</span>
+            </a>
+            <h5 className="icon-name">Mon cv</h5>
+          </li>
+        </ul>
+      </div>
+      <div className="contact-container">
+        <h3>
+          Pour me joindre <span className="fa-icon">{icon.comments}</span>
+        </h3>
+        <ul className="contacts">
+          <li>
+            <a
+              className="fa-icon"
+              href="mailto:augusine.melv@gmail.com"
+              id="iconEmail"
+            >
+              {icon.envelope}
+            </a>
+            <h4>augusine.melv@gmail.com</h4>
+          </li>
+          <li>
+            <a className="fa-icon" href="tel:+330786117368" id="iconPhone">
+              {icon.phone}
+            </a>
+            <h4>07 86 11 73 68</h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

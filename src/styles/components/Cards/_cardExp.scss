@@ -1,0 +1,120 @@
+.experiences {
+  @include container;
+  padding-top: 80px;
+
+  .card-exp {
+    @include cardContainer;
+    width: 650px;
+    height: 475px;
+
+    @media screen and (max-width: 810px) {
+      width: 425px;
+      height: 625px;
+    }
+
+    .card-exp-content {
+      @include cardContent;
+
+      h2 {
+        font-size: 1.3rem;
+
+        @media screen and (max-width: 810px) {
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+
+      h4 {
+        @include h4Card;
+        @media screen and (max-width: 540px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      h4.company {
+        font-size: 0.9rem;
+      }
+
+      p {
+        @include paragraphCard;
+        @media screen and (max-width: 540px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      span.date {
+        @include spanCard;
+        @media screen and (max-width: 540px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      .skills {
+        display: flex;
+        justify-content: space-around;
+        width: 95%;
+        margin: $marginCenter;
+
+        @media screen and (max-width: 540px) {
+          width: 75%;
+          gap: 10px;
+        }
+
+        li {
+          position: relative;
+          font-family: $fontOxy;
+
+          @media screen and (max-width: 540px) {
+            @include flexContainer;
+            font-size: 0.8rem;
+          }
+
+          &::before {
+            position: absolute;
+            color: $colorO;
+            content: "\2713";
+            left: -15px;
+            transform: translateY(-4px);
+
+            @media screen and (max-width: 540px) {
+              left: -14px;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+
+      .tasks {
+        @include columnFlex;
+        width: 88%;
+        margin: $marginCenter;
+        gap: 5px;
+
+        @media screen and (max-width: 540px) {
+          width: 60%;
+        }
+
+        @include regularFont;
+        li {
+          position: relative;
+          width: 90%;
+          margin: $marginCenter;
+          font-size: 0.9rem;
+          line-height: 25px;
+          font-family: $fontOxy;
+
+          @media screen and (max-width: 540px) {
+            font-size: 0.8rem;
+          }
+
+          &::before {
+            position: absolute;
+            content: "\2710";
+            left: -17px;
+            transform: translateY(2px);
+          }
+        }
+      }
+    }
+  }
+}
