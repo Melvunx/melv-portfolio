@@ -44,7 +44,7 @@
           border: none;
           padding: 0.5rem 0;
           color: $colorB3;
-          transition: all 0.15s ease-in-out;
+          transition: all 0.15s $easeout;
 
           &:hover {
             background: $colorHover;
@@ -59,7 +59,7 @@
       border-radius: 12px;
       cursor: pointer;
       box-shadow: $boxShadowCard;
-      transition: all 0.2s linear;
+      transition: $regularTransition;
 
       &:hover {
         background: $colorW;
@@ -87,7 +87,7 @@
       padding: 10px;
       overflow: hidden;
       border-radius: 15px;
-      transition: 0.2s linear;
+      transition: $regularTransition;
 
       .card-project {
         padding: 20px;
@@ -106,7 +106,7 @@
         }
 
         video {
-          transition: 0.2s;
+          transition: $regularTransition;
           animation: displayVid 1s linear forwards;
           animation-delay: 0.25s;
           opacity: 0;

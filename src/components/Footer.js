@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -7,7 +7,6 @@ import {
   faMobileScreenButton,
   faComments,
   faUser,
-  faFilePdf,
 } from "@fortawesome/free-solid-svg-icons";
 
 const icon = {
@@ -17,14 +16,24 @@ const icon = {
   user: <FontAwesomeIcon icon={faUser} />,
   github: <FontAwesomeIcon icon={faGithub} />,
   linkedIn: <FontAwesomeIcon icon={faLinkedin} />,
-  pdf: <FontAwesomeIcon icon={faFilePdf} />,
 };
 
 const Footer = () => {
+  const [isTitleLinkHovering, setIsTitleLinkHovering] = useState(false);
+  const [isTitleContactHovering, setIsTitleContactHovering] = useState(false);
+
+  const handleHoverOver = (setHoverState) => () => setHoverState(true);
+
+  const handleHoverLeave = (setHoverState) => () => setHoverState(false);
+
   return (
     <div className="footer">
-      <div className="link-container">
-        <h3>
+      <div
+        className="link-container"
+        onMouseOver={handleHoverOver(setIsTitleLinkHovering)}
+        onMouseLeave={handleHoverLeave(setIsTitleLinkHovering)}
+      >
+        <h3 className={isTitleLinkHovering ? "underline-in" : "underline-out"}>
           Mes liens <span>{icon.user}</span>
         </h3>
         <ul className="links">
@@ -43,19 +52,19 @@ const Footer = () => {
             </a>
             <h5 className="icon-name">Github</h5>
           </li>
-          <li>
-            <a id="cv" href="cv.pdf" download="cv.pdf">
-              <span className="fa-icon">{icon.pdf}</span>
-            </a>
-            <h5 className="icon-name">Mon cv</h5>
-          </li>
         </ul>
       </div>
-      <div className="contact-container">
-        <h3>
+      <div
+        className="contact-container"
+        onMouseOver={handleHoverOver(setIsTitleContactHovering)}
+        onMouseLeave={handleHoverLeave(setIsTitleContactHovering)}
+      >
+        <h3
+          className={isTitleContactHovering ? "underline-in" : "underline-out"}
+        >
           Pour me joindre <span className="fa-icon">{icon.comments}</span>
         </h3>
-        <ul className="contacts">
+        <ul id="contact" className="contacts">
           <li>
             <a
               className="fa-icon"

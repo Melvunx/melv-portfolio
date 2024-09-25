@@ -56,7 +56,7 @@
 
       li {
         color: $colorW;
-        transition: 0.3s;
+        transition: $regularTransition;
 
         &:hover {
           color: $colorHover;

@@ -16,21 +16,11 @@
     align-items: center;
     gap: 6px;
     font-family: $fontMerri;
-    transition: 0.3s linear;
+    transition: $regularTransition;
+    color: $colorCard;
 
-    & span {
-      color: initial;
+    span {
       font-size: 1rem;
-      transition: 0.3s linear;
-    }
-  }
-
-  & .link-container:hover > h3,
-  .contact-container:hover > h3 {
-    color: $colorW;
-
-    & span {
-      color: $colorL;
     }
   }
 
@@ -45,9 +35,9 @@
 
       &::after {
         content: "";
-        height: 1px;
+        height: 2px;
         width: 100%;
-        background: $colorB2;
+        background: $colorW;
       }
     }
 
@@ -62,7 +52,7 @@
       }
 
       &:hover li:not(:hover) {
-        opacity: 0.5;
+        opacity: 0.3;
       }
 
       li {
@@ -143,6 +133,7 @@
         #linkedin,
         #github,
         #cv {
+          color: $colorG2;
           transition: $regularTransition;
           font-size: 1.2rem;
         }
@@ -214,6 +205,10 @@
         gap: 4px;
       }
 
+      li, a {
+        color: $colorG2;
+      }
+
       li {
         position: relative;
 
@@ -249,7 +244,7 @@
 
         h4 {
           font-size: 0.95rem;
-          transition: all 0.3s 0.1s linear;
+          transition: $regularTransition;
         }
       }
     }
