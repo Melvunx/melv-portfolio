@@ -58,12 +58,13 @@
       padding: 8px;
       border-radius: 12px;
       cursor: pointer;
+      border: none;
       box-shadow: $boxShadowCard;
       transition: $regularTransition;
 
       &:hover {
         background: $colorW;
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
     }
   }
@@ -97,6 +98,10 @@
 
       .card-project-content {
         @include card;
+
+        img {
+          cursor: pointer;
+        }
 
         img,
         video {
