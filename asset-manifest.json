@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/melv-portfolio/static/css/main.8515b321.css",
-    "main.js": "/melv-portfolio/static/js/main.e49ce10d.js",
+    "main.js": "/melv-portfolio/static/js/main.647a9729.js",
     "static/media/starmation-video.mp4": "/melv-portfolio/static/media/starmation-video.32368a7fe71212643419.mp4",
     "static/media/resto-video.mp4": "/melv-portfolio/static/media/resto-video.b3e8c56a9b16ca2e88bd.mp4",
     "static/media/gaming-campus-video.mp4": "/melv-portfolio/static/media/gaming-campus-video.15f85a67fe4b716315f2.mp4",
@@ -30,10 +30,10 @@
     "static/media/Bubble-shooter-img.png": "/melv-portfolio/static/media/Bubble-shooter-img.11d6e51d1830ec1d762f.png",
     "index.html": "/melv-portfolio/index.html",
     "main.8515b321.css.map": "/melv-portfolio/static/css/main.8515b321.css.map",
-    "main.e49ce10d.js.map": "/melv-portfolio/static/js/main.e49ce10d.js.map"
+    "main.647a9729.js.map": "/melv-portfolio/static/js/main.647a9729.js.map"
   },
   "entrypoints": [
     "static/css/main.8515b321.css",
-    "static/js/main.e49ce10d.js"
+    "static/js/main.647a9729.js"
   ]
 }
