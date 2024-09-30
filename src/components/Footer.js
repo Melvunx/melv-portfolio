@@ -68,12 +68,12 @@ const Footer = () => {
           <li>
             <a
               className="fa-icon"
-              href="mailto:augusine.melv@gmail.com"
+              href="mailto:augustine.melv@gmail.com"
               id="iconEmail"
             >
               {icon.envelope}
             </a>
-            <h4>augusine.melv@gmail.com</h4>
+            <h4>augustine.melv@gmail.com</h4>
           </li>
           <li>
             <a className="fa-icon" href="tel:+330786117368" id="iconPhone">

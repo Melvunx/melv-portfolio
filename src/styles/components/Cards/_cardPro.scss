@@ -1,8 +1,30 @@
 .background-section {
   .filter {
     @include columnFlex;
-    gap: 10px;
+    gap: 3px;
     margin-top: 60px;
+
+    h2.compteur {
+      color: $colorW;
+      font-size: 1.2rem;
+      font-family: $fontExo;
+
+      span {
+        transition: $regularTransition;
+      }
+
+      span.high-number {
+        color: $colorL;
+      }
+
+      span.mid-number {
+        color: gold;
+      }
+
+      span.low-number {
+        color: $colorCard;
+      }
+    }
 
     .radio-inputs {
       position: relative;

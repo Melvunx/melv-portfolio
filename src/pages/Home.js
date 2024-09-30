@@ -80,7 +80,7 @@ const Home = () => {
                 </button>
               </a>
               <a
-                href="Cv-Melvin-Augustine.pdf"
+                href="Melvin-Augustine-CV.pdf"
                 download="Cv-Melvin-Augustine.pdf"
               >
                 <button

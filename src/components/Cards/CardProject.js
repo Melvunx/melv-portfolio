@@ -4,6 +4,7 @@ import projects from "../../data/dataProjet";
 const CardProject = () => {
   const [selectedRadio, setSelectedRadio] = useState("");
   const [hoveredProjectId, setHoveredProjectId] = useState(null);
+  const [projectNumber, setProjectNumber] = useState(0);
   const videoRefs = useRef([]); // Références pour accéder aux vidéos
   const timeoutRef = useRef(null); // Référence pour stocker l'ID du timeout
 
@@ -61,9 +62,33 @@ const CardProject = () => {
     }
   }, []);
 
+  //Filtrer les projets en fonction de la technologie sélectionnée
+  const filteredProjects = projects.filter(
+    (project) =>
+      selectedRadio === "" || project.technologies.includes(selectedRadio)
+  );
+
+  useEffect(() => {
+    setProjectNumber(filteredProjects.length);
+  }, [filteredProjects]);
+
+  const colorSelector = (number) => {
+    if (number > 6) {
+      return "high-number";
+    } else if (number >= 4) {
+      return "mid-number";
+    } else if (number < 4) {
+      return "low-number";
+    }
+  };
+
   return (
     <div className="background-section">
       <div className="filter">
+        <h2 className="compteur">
+          Nombre de projets :{" "}
+          <span className={colorSelector(projectNumber)}>{projectNumber}</span>
+        </h2>
         <div className="radio-inputs">
           {radios.map((techno) => {
             return (
@@ -89,12 +114,7 @@ const CardProject = () => {
       </div>
 
       <div className="project-container">
-        {projects
-          .filter(
-            (project) =>
-              selectedRadio === "" ||
-              project.technologies.includes(selectedRadio)
-          )
+        {filteredProjects
           .sort((a, b) => b.date - a.date)
           .map((project) => (
             <div
