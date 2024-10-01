@@ -1,10 +1,10 @@
 const formations = [
   {
     id: 1,
-    name: "Baccalauréat Générale",
+    name: "Baccalauréat Général",
     level: "Bac",
     school: ["Lycée Nord Antlantique"],
-    description: "Bac générale avec mention assez bien.",
+    description: "Bac général avec mention assez bien.",
     domain: "Général",
     localisations: ["Martinique", "Sainte-Marie"],
     date: {

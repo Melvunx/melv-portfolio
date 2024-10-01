@@ -18,7 +18,7 @@ const experiences = [
     },
     tasks: [
       "Gestion des stocks de marchandises",
-      "Gestion des présences des employées",
+      "Gestion des présences des employés",
       "Vérifier les marchandises envoyées à la vente",
     ],
   },
@@ -48,7 +48,7 @@ const experiences = [
   {
     id: 3,
     job: "Ouvrier agricole",
-    contract: "Emploie saisonnier",
+    contract: "Emploi saisonnier",
     company: "Bice",
     sector: "Exploitation agricole",
     lieu: ["Martinique", "Sainte-Marie"],
