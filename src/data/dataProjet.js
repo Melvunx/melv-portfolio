@@ -1,3 +1,19 @@
+class Duree {
+  constructor(name, start, end) {
+    this.name = name;
+    this.start = new Date(start);
+    this.end = new Date(end);
+  }
+
+  getMonthsBetween(start, end) {
+    let yearsDifference = end.getFullYear() - start.getFullYear();
+    let monthsDifference = end.getMonth() - start.getMonth();
+
+    let totalMonths = yearsDifference * 12 + monthsDifference;
+    return totalMonths;
+  }
+}
+
 const projects = [
   {
     id: 1,
@@ -6,6 +22,10 @@ const projects = [
     technologies: ["html", "css", "scss"],
     image: require("../assets/projects/img-projet/Gaming-campus-img.png"),
     alt: "Image gaming Campus",
+    link: {
+      http: "https://melvunx.github.io/Projet-Gaming-Campus/",
+      name: "Gaming Campus",
+    },
     video: require("../assets/projects/video-projet/gaming-campus-video.mp4"),
     date: new Date([2024, 8, 22]),
   },
@@ -17,6 +37,10 @@ const projects = [
     technologies: ["html", "css", "scss"],
     image: require("../assets/projects/img-projet/Montagne-img.png"),
     alt: "Image E-commerce",
+    link: {
+      http: "https://melvunx.github.io/Projet-Montagne/",
+      name: "La Montagne",
+    },
     video: require("../assets/projects/video-projet/montagne-video.mp4"),
     date: new Date([2024, 8, 25]),
   },
@@ -27,6 +51,10 @@ const projects = [
     technologies: ["html", "css", "scss"],
     image: require("../assets/projects/img-projet/Resto-img.png"),
     alt: "Image Resto",
+    link: {
+      http: "https://melvunx.github.io/Projet-Resto/",
+      name: "Resto",
+    },
     video: require("../assets/projects/video-projet/resto-video.mp4"),
     date: new Date([2024, 8, 28]),
   },
@@ -45,7 +73,15 @@ const projects = [
     id: 5,
     name: "Todo-list",
     description: "Ce projet est un exemple de liste de tâches.",
-    technologies: ["html", "pug", "css", "javascript", "node.js", "vue.js"],
+    technologies: [
+      "html",
+      "pug",
+      "css",
+      "javascript",
+      "node.js",
+      "mySql",
+      "vue.js",
+    ],
     image: require("../assets/projects/img-projet/Melvunx-todolist-img.png"),
     alt: "Image Todo-list",
     video: require("../assets/projects/video-projet/melvunx-todolist-video.mp4"),
@@ -58,6 +94,10 @@ const projects = [
     technologies: ["html", "css", "javascript"],
     image: require("../assets/projects/img-projet/Quiz-img.png"),
     alt: "Image quiz'Antilles",
+    link: {
+      http: "https://melvunx.github.io/QuizAntilles/",
+      name: "Quiz'Antilles",
+    },
     video: require("../assets/projects/video-projet/quiz-video.mp4"),
     date: new Date([2023, 12, 21]),
   },
@@ -80,6 +120,10 @@ const projects = [
     technologies: ["html", "css", "javascript", "api"],
     image: require("../assets/projects/img-projet/User-app-img.png"),
     alt: "Image User Application",
+    link: {
+      http: "https://melvunx.github.io/User-Api/",
+      name: "User App",
+    },
     video: require("../assets/projects/video-projet/user-app-video.mp4"),
     date: new Date([2024, 9, 7]),
   },
@@ -91,6 +135,10 @@ const projects = [
     technologies: ["html", "css", "javascript"],
     image: require("../assets/projects/img-projet/Bubble-shooter-img.png"),
     alt: "Image Bubble Shooter",
+    link: {
+      http: "https://melvunx.github.io/Mini-bubble-shooter/",
+      name: "Bubble shooter",
+    },
     video: require("../assets/projects/video-projet/bubble-shooter-video.mp4"),
     date: new Date([2024, 9, 7]),
   },
