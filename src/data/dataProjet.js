@@ -1,18 +1,4 @@
-class Duree {
-  constructor(name, start, end) {
-    this.name = name;
-    this.start = new Date(start);
-    this.end = new Date(end);
-  }
-
-  getMonthsBetween(start, end) {
-    let yearsDifference = end.getFullYear() - start.getFullYear();
-    let monthsDifference = end.getMonth() - start.getMonth();
-
-    let totalMonths = yearsDifference * 12 + monthsDifference;
-    return totalMonths;
-  }
-}
+import { Calendar } from "../assets/class/Calendar";
 
 const projects = [
   {
@@ -27,7 +13,11 @@ const projects = [
       name: "Gaming Campus",
     },
     video: require("../assets/projects/video-projet/gaming-campus-video.mp4"),
-    date: new Date([2024, 8, 22]),
+    date: new Calendar(
+      "Dates projet Gaming Campus",
+      [2024, 8, 22],
+      [2024, 8, 24]
+    ),
   },
   {
     id: 2,
@@ -42,7 +32,11 @@ const projects = [
       name: "La Montagne",
     },
     video: require("../assets/projects/video-projet/montagne-video.mp4"),
-    date: new Date([2024, 8, 25]),
+    date: new Calendar(
+      "Dates Projet La Montagne",
+      [2024, 8, 25],
+      [2024, 8, 28]
+    ),
   },
   {
     id: 3,
@@ -56,7 +50,7 @@ const projects = [
       name: "Resto",
     },
     video: require("../assets/projects/video-projet/resto-video.mp4"),
-    date: new Date([2024, 8, 28]),
+    date: new Calendar("Dates Projet Le Resto", [2024, 8, 28], [2024, 8, 30]),
   },
   {
     id: 4,
@@ -66,8 +60,12 @@ const projects = [
     technologies: ["html", "css", "javascript", "node.js", "mySql"],
     image: require("../assets/projects/img-projet/Starmation-Img.png"),
     alt: "Image Starmation",
+    link: {
+      http: "#",
+      name: "Non disponible",
+    },
     video: require("../assets/projects/video-projet/starmation-video.mp4"),
-    date: new Date([2024, 5, 15]),
+    date: new Calendar("Dates Projet Starmation", [2024, 4, 20], [2024, 5, 15]),
   },
   {
     id: 5,
@@ -84,22 +82,30 @@ const projects = [
     ],
     image: require("../assets/projects/img-projet/Melvunx-todolist-img.png"),
     alt: "Image Todo-list",
+    link: {
+      http: "#",
+      name: "Non disponible",
+    },
     video: require("../assets/projects/video-projet/melvunx-todolist-video.mp4"),
-    date: new Date([2024, 4, 20]),
+    date: new Calendar("Dates Projet Todo-list", [2024, 3, 25], [2024, 4, 7]),
   },
   {
     id: 6,
     name: "Projet Quiz'Antilles",
     description: "Ce projet est un exemple de quiz intéractif.",
     technologies: ["html", "css", "javascript"],
-    image: require("../assets/projects/img-projet/Quiz-img.png"),
+    image: require("../assets/projects/img-projet/newQuiz.png"),
     alt: "Image quiz'Antilles",
     link: {
       http: "https://melvunx.github.io/QuizAntilles/",
       name: "Quiz'Antilles",
     },
-    video: require("../assets/projects/video-projet/quiz-video.mp4"),
-    date: new Date([2023, 12, 21]),
+    video: require("../assets/projects/video-projet/newQuiz.mp4"),
+    date: new Calendar(
+      "Dates Projet Quiz'Antilles",
+      [2024, 9, 27],
+      [2024, 10, 2]
+    ),
   },
   {
     id: 7,
@@ -109,8 +115,12 @@ const projects = [
     technologies: ["html", "scss", "api", "javascript", "react"],
     image: require("../assets/projects/img-projet/Country-app-img.png"),
     alt: "Image Country Application",
+    link: {
+      http: "#",
+      name: "Non disponible",
+    },
     video: require("../assets/projects/video-projet/country-app-video.mp4"),
-    date: new Date([2024, 9, 9]),
+    date: new Calendar("Dates Country App", [2024, 9, 9], [2024, 9, 10]),
   },
   {
     id: 8,
@@ -125,7 +135,7 @@ const projects = [
       name: "User App",
     },
     video: require("../assets/projects/video-projet/user-app-video.mp4"),
-    date: new Date([2024, 9, 7]),
+    date: new Calendar("Dates User App", [2024, 9, 7], [2024, 9, 8]),
   },
   {
     id: 9,
@@ -140,7 +150,7 @@ const projects = [
       name: "Bubble shooter",
     },
     video: require("../assets/projects/video-projet/bubble-shooter-video.mp4"),
-    date: new Date([2024, 9, 7]),
+    date: new Calendar("Dates Bubble Shooter", [2024, 9, 7], [2024, 9, 8]),
   },
 ];
 

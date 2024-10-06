@@ -1,7 +1,5 @@
 import React from "react";
 import experiences from "../../data/dataExp";
-import dateFormative from "../../assets/function/date";
-import durationCalc from "../../assets/function/duration";
 
 const CardExp = () => {
   return (
@@ -13,11 +11,7 @@ const CardExp = () => {
               <div className="card-exp-content">
                 <h2>
                   {experience.job} - {experience.contract} de{" "}
-                  {durationCalc(
-                    experience.duration.start,
-                    experience.duration.end
-                  )}{" "}
-                  mois
+                  {experience.date.getMonthsGap()}
                 </h2>
                 <h4 className="company">
                   Entreprise : {experience.company} - {experience.sector}
@@ -42,8 +36,8 @@ const CardExp = () => {
                   })}
                 </ul>
                 <span className="date">
-                  {dateFormative(experience.duration.start)} -{" "}
-                  {dateFormative(experience.duration.end)}
+                  {experience.date.setFrenchStartDate()} -{" "}
+                  {experience.date.setFrenchEndDate()}
                 </span>
               </div>
             </div>

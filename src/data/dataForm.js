@@ -1,3 +1,5 @@
+import { Calendar } from "../assets/class/Calendar";
+
 const formations = [
   {
     id: 1,
@@ -7,10 +9,7 @@ const formations = [
     description: "Bac général avec mention assez bien.",
     domain: "Général",
     localisations: ["Martinique", "Sainte-Marie"],
-    date: {
-      start: new Date([2018, 9, 2]),
-      end: new Date([2021, 6, 18]),
-    },
+    date: new Calendar("Dates Lycée", [2018, 9, 2], [2021, 6, 18]),
   },
   {
     id: 2,
@@ -20,10 +19,7 @@ const formations = [
     description: "Première année en MPSI, seconde année en MP.",
     domain: "Scientifique",
     localisations: ["Martinique", "Fort-de-France"],
-    date: {
-      start: new Date([2021, 9, 2]),
-      end: new Date([2023, 4, 5]),
-    },
+    date: new Calendar("Dates Prépa", [2021, 9, 2], [2023, 4, 5]),
   },
   {
     id: 3,
@@ -34,10 +30,7 @@ const formations = [
       "Premier semestre à l'Efrei et second semestre à l'Asia Pacific University",
     domain: "Informatique",
     localisations: ["Paris", "Kuala Lumpur"],
-    date: {
-      start: new Date([2023, 9, 2]),
-      end: new Date([2024, 7, 5]),
-    },
+    date: new Calendar("Dates Efrei L3", [2023, 9, 2], [2024, 7, 5]),
   },
   {
     id: 4,
@@ -47,10 +40,7 @@ const formations = [
     description: "Formation développeur d'application JavaScript React",
     domain: "Informatique - Développement Web",
     localisations: ["Paris"],
-    date: {
-      start: new Date([2024, 9, 5]),
-      end: new Date([2025, 9, 2]),
-    },
+    date: new Calendar("Dates OpenClassroom", [2024, 9, 5], [2025, 9, 2]),
   },
 ];
 

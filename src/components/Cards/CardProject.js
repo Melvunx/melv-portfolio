@@ -115,7 +115,7 @@ const CardProject = () => {
 
       <div className="project-container">
         {filteredProjects
-          .sort((a, b) => b.date - a.date)
+          .sort((a, b) => b.date.getEndDate() - a.date.getStartDate())
           .map((project) => (
             <div
               key={project.id}
@@ -138,6 +138,10 @@ const CardProject = () => {
                   )}
                   <div className="project-element">
                     <h2>{project.name}</h2>
+                    <a href={project.link.http}>
+                      <h4>{project.link.name}</h4>
+                    </a>
+                    <h4>Durée : {project.date.getDaysGap()} </h4>
                     <p>{project.description}</p>
                     <h4>Technologies utilisées</h4>
                     <ul className="technologie">
@@ -146,12 +150,7 @@ const CardProject = () => {
                       ))}
                     </ul>
                     <span className="date">
-                      Fait le{" "}
-                      {new Date(project.date).toLocaleDateString("fr-FR", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      })}
+                      Fait le {project.date.setFrenchStartDate()}
                     </span>
                   </div>
                 </div>

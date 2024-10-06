@@ -1,3 +1,5 @@
+import { Calendar } from "../assets/class/Calendar";
+
 const experiences = [
   {
     id: 1,
@@ -10,12 +12,9 @@ const experiences = [
       "Gestion de bases de données",
       "Gestion d'équipe",
       "infrastructure informatique",
-      "Responsabilités"
+      "Responsabilités",
     ],
-    duration: {
-      start: new Date([2022, 7, 1]),
-      end: new Date([2022, 8, 31]),
-    },
+    date: new Calendar("Date Stages Informatique", [2022, 7, 1], [2022, 8, 31]),
     tasks: [
       "Gestion des stocks de marchandises",
       "Gestion des présences des employés",
@@ -35,10 +34,7 @@ const experiences = [
       "Esprit d'équipe",
       "Travailler sous pression",
     ],
-    duration: {
-      start: new Date([2018, 5, 10]),
-      end: new Date([2018, 6, 10]),
-    },
+    date: new Calendar("Dates Stage Fariba", [2018, 5, 10], [2018, 6, 10]),
     tasks: [
       "Utilisation de machines pour emballer et sceller efficacement les produits agroalimentaires dans le respect des normes de sécurité et d'hygiène",
       "Application des étiquettes sur les emballages pour assurer le suivi des produits",
@@ -58,10 +54,7 @@ const experiences = [
       "Esprit d'équipe",
       "Rigueur",
     ],
-    duration: {
-      start: new Date([2019, 6, 30]),
-      end: new Date([2019, 8, 31]),
-    },
+    date: new Calendar("Dates Stage Bice", [2019, 6, 30], [2019, 8, 31]),
     tasks: [
       "Entretien des cultures de bananes",
       "Entretenir les équipements agricoles",
