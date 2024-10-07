@@ -1,5 +1,12 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { projects } from "../../data/dataProjet";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink, faLinkSlash } from "@fortawesome/free-solid-svg-icons";
+
+const icon = {
+  link: <FontAwesomeIcon icon={faLink} />,
+  linkSlash: <FontAwesomeIcon icon={faLinkSlash} />,
+};
 
 const CardProject = () => {
   const [selectedRadio, setSelectedRadio] = useState("");
@@ -145,6 +152,9 @@ const CardProject = () => {
                         }
                       >
                         {project.name}
+                        <span>
+                          {project.url === "#" ? icon.linkSlash : icon.link}
+                        </span>
                       </a>
                     </h4>
                     <h4>Durée : {project.date.getDaysGap()} </h4>

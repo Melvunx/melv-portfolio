@@ -157,8 +157,21 @@
             @include h4Card;
             margin: 8px 0;
 
+            & a.simple-url {
+              transition: $regularTransition;
+            }
+
+            &:hover a.simple-url {
+              opacity: 0.4;
+            }
+
             a {
               letter-spacing: 1px;
+
+              span {
+                font-size: 0.9rem;
+                margin-left: 5px;
+              }
 
               &.simple-url {
                 color: $colorB3;
