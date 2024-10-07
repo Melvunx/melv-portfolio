@@ -98,7 +98,7 @@ export const projects = [
     image: require("../assets/projects/img-projet/Country-app-img.png"),
     alt: "Image Country Application",
     video: require("../assets/projects/video-projet/country-app-video.mp4"),
-    url: "#",
+    url: "https://melvunx.github.io/Country-App-React",
     date: new Calendar("Dates Country App", [2024, 9, 9], [2024, 9, 10]),
   },
   {
