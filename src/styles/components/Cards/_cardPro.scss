@@ -156,6 +156,30 @@
           h4 {
             @include h4Card;
             margin: 8px 0;
+
+            a {
+              letter-spacing: 1px;
+
+              &.simple-url {
+                color: $colorB3;
+                cursor: default;
+                text-decoration: none;
+                pointer-events: none;
+              }
+
+              &.active-url {
+                text-decoration: underline;
+                transition: $regularTransition;
+
+                &:hover {
+                  color: $colorHover;
+                }
+
+                &:active {
+                  color: $colorO;
+                }
+              }
+            }
           }
 
           p {

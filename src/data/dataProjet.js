@@ -1,6 +1,6 @@
 import { Calendar } from "../assets/class/Calendar";
 
-const projects = [
+export const projects = [
   {
     id: 1,
     name: "Gaming Campus",
@@ -8,11 +8,8 @@ const projects = [
     technologies: ["html", "css", "scss"],
     image: require("../assets/projects/img-projet/Gaming-campus-img.png"),
     alt: "Image gaming Campus",
-    link: {
-      http: "https://melvunx.github.io/Projet-Gaming-Campus/",
-      name: "Gaming Campus",
-    },
     video: require("../assets/projects/video-projet/gaming-campus-video.mp4"),
+    url: "https://melvunx.github.io/Projet-Gaming-Campus/",
     date: new Calendar(
       "Dates projet Gaming Campus",
       [2024, 8, 22],
@@ -27,11 +24,8 @@ const projects = [
     technologies: ["html", "css", "scss"],
     image: require("../assets/projects/img-projet/Montagne-img.png"),
     alt: "Image E-commerce",
-    link: {
-      http: "https://melvunx.github.io/Projet-Montagne/",
-      name: "La Montagne",
-    },
     video: require("../assets/projects/video-projet/montagne-video.mp4"),
+    url: "https://melvunx.github.io/Projet-Montagne/",
     date: new Calendar(
       "Dates Projet La Montagne",
       [2024, 8, 25],
@@ -45,11 +39,8 @@ const projects = [
     technologies: ["html", "css", "scss"],
     image: require("../assets/projects/img-projet/Resto-img.png"),
     alt: "Image Resto",
-    link: {
-      http: "https://melvunx.github.io/Projet-Resto/",
-      name: "Resto",
-    },
     video: require("../assets/projects/video-projet/resto-video.mp4"),
+    url: "https://melvunx.github.io/Projet-Resto/",
     date: new Calendar("Dates Projet Le Resto", [2024, 8, 28], [2024, 8, 30]),
   },
   {
@@ -60,11 +51,8 @@ const projects = [
     technologies: ["html", "css", "javascript", "node.js", "mySql"],
     image: require("../assets/projects/img-projet/Starmation-Img.png"),
     alt: "Image Starmation",
-    link: {
-      http: "#",
-      name: "Non disponible",
-    },
     video: require("../assets/projects/video-projet/starmation-video.mp4"),
+    url: "#",
     date: new Calendar("Dates Projet Starmation", [2024, 4, 20], [2024, 5, 15]),
   },
   {
@@ -82,11 +70,8 @@ const projects = [
     ],
     image: require("../assets/projects/img-projet/Melvunx-todolist-img.png"),
     alt: "Image Todo-list",
-    link: {
-      http: "#",
-      name: "Non disponible",
-    },
     video: require("../assets/projects/video-projet/melvunx-todolist-video.mp4"),
+    url: "#",
     date: new Calendar("Dates Projet Todo-list", [2024, 3, 25], [2024, 4, 7]),
   },
   {
@@ -96,11 +81,8 @@ const projects = [
     technologies: ["html", "css", "javascript"],
     image: require("../assets/projects/img-projet/newQuiz.png"),
     alt: "Image quiz'Antilles",
-    link: {
-      http: "https://melvunx.github.io/QuizAntilles/",
-      name: "Quiz'Antilles",
-    },
     video: require("../assets/projects/video-projet/newQuiz.mp4"),
+    url: "https://melvunx.github.io/QuizAntilles/",
     date: new Calendar(
       "Dates Projet Quiz'Antilles",
       [2024, 9, 27],
@@ -115,11 +97,8 @@ const projects = [
     technologies: ["html", "scss", "api", "javascript", "react"],
     image: require("../assets/projects/img-projet/Country-app-img.png"),
     alt: "Image Country Application",
-    link: {
-      http: "#",
-      name: "Non disponible",
-    },
     video: require("../assets/projects/video-projet/country-app-video.mp4"),
+    url: "#",
     date: new Calendar("Dates Country App", [2024, 9, 9], [2024, 9, 10]),
   },
   {
@@ -130,11 +109,8 @@ const projects = [
     technologies: ["html", "css", "javascript", "api"],
     image: require("../assets/projects/img-projet/User-app-img.png"),
     alt: "Image User Application",
-    link: {
-      http: "https://melvunx.github.io/User-Api/",
-      name: "User App",
-    },
     video: require("../assets/projects/video-projet/user-app-video.mp4"),
+    url: "https://melvunx.github.io/User-Api/",
     date: new Calendar("Dates User App", [2024, 9, 7], [2024, 9, 8]),
   },
   {
@@ -145,13 +121,45 @@ const projects = [
     technologies: ["html", "css", "javascript"],
     image: require("../assets/projects/img-projet/Bubble-shooter-img.png"),
     alt: "Image Bubble Shooter",
-    link: {
-      http: "https://melvunx.github.io/Mini-bubble-shooter/",
-      name: "Bubble shooter",
-    },
     video: require("../assets/projects/video-projet/bubble-shooter-video.mp4"),
+    url: "https://melvunx.github.io/Mini-bubble-shooter/",
     date: new Calendar("Dates Bubble Shooter", [2024, 9, 7], [2024, 9, 8]),
   },
+  {
+    id: 10,
+    name: "Timer App",
+    description: "Ce petit projet est une application chronomètre.",
+    technologies: ["html", "css", "javascript"],
+    image: require("../assets/projects/img-projet/Timer-app.png"),
+    alt: "Image Timer App",
+    video: require("../assets/projects/video-projet/Timer-app.mp4"),
+    url: "https://melvunx.github.io/Timer-App/",
+    date: new Calendar("Dates Projet Timer", [2024, 9, 27], [2024, 9, 28]),
+  },
+  {
+    id: 11,
+    name: "Yoga App",
+    description: "Ce petit projet est une application de yoga.",
+    technologies: ["html", "css", "javascript"],
+    image: require("../assets/projects/img-projet/Yoga-App.png"),
+    alt: "Image Yoga App",
+    video: require("../assets/projects/video-projet/yoga-app.mp4"),
+    url: "https://melvunx.github.io/Yoga-Application/",
+    date: new Calendar("Dates Projet Yoga", [2024, 9, 25], [2024, 9, 26]),
+  },
+  {
+    id: 12,
+    name: "Password Generator",
+    description: "Ce petit projet est un générateur de mot de passe.",
+    technologies: ["html", "css", "javascript"],
+    image: require("../assets/projects/img-projet/Password-Generator.png"),
+    alt: "Image Password Generator",
+    video: require("../assets/projects/video-projet/password-Generator.mp4"),
+    url: "https://melvunx.github.io/Mini-projet-Generateur-de-mdp/",
+    date: new Calendar(
+      "Dates Mini projet Mdp generator",
+      [2024, 8, 30],
+      [2024, 8, 31]
+    ),
+  },
 ];
-
-export default projects;

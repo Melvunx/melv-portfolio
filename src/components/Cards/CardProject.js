@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import projects from "../../data/dataProjet";
+import { projects } from "../../data/dataProjet";
 
 const CardProject = () => {
   const [selectedRadio, setSelectedRadio] = useState("");
@@ -90,9 +90,9 @@ const CardProject = () => {
           <span className={colorSelector(projectNumber)}>{projectNumber}</span>
         </h2>
         <div className="radio-inputs">
-          {radios.map((techno) => {
+          {radios.map((techno, index) => {
             return (
-              <label htmlFor={techno} className="radio">
+              <label htmlFor={techno} className="radio" key={index}>
                 <input
                   type="radio"
                   name="technoRadio"
@@ -137,16 +137,22 @@ const CardProject = () => {
                     <img src={project.image} alt={project.alt} />
                   )}
                   <div className="project-element">
-                    <h2>{project.name}</h2>
-                    <a href={project.link.http}>
-                      <h4>{project.link.name}</h4>
-                    </a>
+                    <h4>
+                      <a
+                        href={project.url}
+                        className={
+                          project.url === "#" ? "simple-url" : "active-url"
+                        }
+                      >
+                        {project.name}
+                      </a>
+                    </h4>
                     <h4>Durée : {project.date.getDaysGap()} </h4>
                     <p>{project.description}</p>
                     <h4>Technologies utilisées</h4>
                     <ul className="technologie">
                       {project.technologies.map((technologie, index) => (
-                        <li key={index}>{technologie}</li>
+                        <li key={technologie + index}>{technologie}</li>
                       ))}
                     </ul>
                     <span className="date">
