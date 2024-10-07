@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/melv-portfolio/static/css/main.324f54b3.css",
-    "main.js": "/melv-portfolio/static/js/main.60fb2a0a.js",
+    "main.css": "/melv-portfolio/static/css/main.6fe21a67.css",
+    "main.js": "/melv-portfolio/static/js/main.3956f70e.js",
     "static/media/newQuiz.mp4": "/melv-portfolio/static/media/newQuiz.762b1bb09383bfbc0b0a.mp4",
     "static/media/starmation-video.mp4": "/melv-portfolio/static/media/starmation-video.32368a7fe71212643419.mp4",
     "static/media/Timer-app.mp4": "/melv-portfolio/static/media/Timer-app.2bb99b63bf08fefa0a25.mp4",
@@ -35,11 +35,11 @@
     "static/media/Oxygen-Regular.ttf": "/melv-portfolio/static/media/Oxygen-Regular.56e5848476493abbd93e.ttf",
     "static/media/Bubble-shooter-img.png": "/melv-portfolio/static/media/Bubble-shooter-img.11d6e51d1830ec1d762f.png",
     "index.html": "/melv-portfolio/index.html",
-    "main.324f54b3.css.map": "/melv-portfolio/static/css/main.324f54b3.css.map",
-    "main.60fb2a0a.js.map": "/melv-portfolio/static/js/main.60fb2a0a.js.map"
+    "main.6fe21a67.css.map": "/melv-portfolio/static/css/main.6fe21a67.css.map",
+    "main.3956f70e.js.map": "/melv-portfolio/static/js/main.3956f70e.js.map"
   },
   "entrypoints": [
-    "static/css/main.324f54b3.css",
-    "static/js/main.60fb2a0a.js"
+    "static/css/main.6fe21a67.css",
+    "static/js/main.3956f70e.js"
   ]
 }
