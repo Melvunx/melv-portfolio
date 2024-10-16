@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/melv-portfolio/static/css/main.6fe21a67.css",
-    "main.js": "/melv-portfolio/static/js/main.3956f70e.js",
+    "main.js": "/melv-portfolio/static/js/main.c32bfffa.js",
     "static/media/newQuiz.mp4": "/melv-portfolio/static/media/newQuiz.762b1bb09383bfbc0b0a.mp4",
     "static/media/starmation-video.mp4": "/melv-portfolio/static/media/starmation-video.32368a7fe71212643419.mp4",
     "static/media/Timer-app.mp4": "/melv-portfolio/static/media/Timer-app.2bb99b63bf08fefa0a25.mp4",
@@ -13,6 +13,7 @@
     "static/media/country-app-video.mp4": "/melv-portfolio/static/media/country-app-video.d574157df17faada4e49.mp4",
     "static/media/melvunx-todolist-video.mp4": "/melv-portfolio/static/media/melvunx-todolist-video.40999caae8d8659e75b9.mp4",
     "static/media/password-Generator.mp4": "/melv-portfolio/static/media/password-Generator.ca641da46e6b1e27a784.mp4",
+    "static/media/checkMeals.mp4": "/melv-portfolio/static/media/checkMeals.ee6a81a36e336bce9dc5.mp4",
     "static/media/header-img.jpg": "/melv-portfolio/static/media/header-img.c94f4a7157a81625cce3.jpg",
     "static/media/Timer-app.png": "/melv-portfolio/static/media/Timer-app.561e5d9894f5be0929c1.png",
     "static/media/newQuiz.png": "/melv-portfolio/static/media/newQuiz.776b39ddf8c824227a73.png",
@@ -34,12 +35,13 @@
     "static/media/BrunoAceSC-Regular.ttf": "/melv-portfolio/static/media/BrunoAceSC-Regular.93fc3265381275167a94.ttf",
     "static/media/Oxygen-Regular.ttf": "/melv-portfolio/static/media/Oxygen-Regular.56e5848476493abbd93e.ttf",
     "static/media/Bubble-shooter-img.png": "/melv-portfolio/static/media/Bubble-shooter-img.11d6e51d1830ec1d762f.png",
+    "static/media/CheckMeals.png": "/melv-portfolio/static/media/CheckMeals.bdc9b4e3f5d9271b81aa.png",
     "index.html": "/melv-portfolio/index.html",
     "main.6fe21a67.css.map": "/melv-portfolio/static/css/main.6fe21a67.css.map",
-    "main.3956f70e.js.map": "/melv-portfolio/static/js/main.3956f70e.js.map"
+    "main.c32bfffa.js.map": "/melv-portfolio/static/js/main.c32bfffa.js.map"
   },
   "entrypoints": [
     "static/css/main.6fe21a67.css",
-    "static/js/main.3956f70e.js"
+    "static/js/main.c32bfffa.js"
   ]
 }
