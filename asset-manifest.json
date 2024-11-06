@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/melv-portfolio/static/css/main.6fe21a67.css",
-    "main.js": "/melv-portfolio/static/js/main.c32bfffa.js",
+    "main.js": "/melv-portfolio/static/js/main.785d34f7.js",
     "static/media/newQuiz.mp4": "/melv-portfolio/static/media/newQuiz.762b1bb09383bfbc0b0a.mp4",
     "static/media/starmation-video.mp4": "/melv-portfolio/static/media/starmation-video.32368a7fe71212643419.mp4",
     "static/media/Timer-app.mp4": "/melv-portfolio/static/media/Timer-app.2bb99b63bf08fefa0a25.mp4",
@@ -38,10 +38,10 @@
     "static/media/CheckMeals.png": "/melv-portfolio/static/media/CheckMeals.bdc9b4e3f5d9271b81aa.png",
     "index.html": "/melv-portfolio/index.html",
     "main.6fe21a67.css.map": "/melv-portfolio/static/css/main.6fe21a67.css.map",
-    "main.c32bfffa.js.map": "/melv-portfolio/static/js/main.c32bfffa.js.map"
+    "main.785d34f7.js.map": "/melv-portfolio/static/js/main.785d34f7.js.map"
   },
   "entrypoints": [
     "static/css/main.6fe21a67.css",
-    "static/js/main.c32bfffa.js"
+    "static/js/main.785d34f7.js"
   ]
 }
