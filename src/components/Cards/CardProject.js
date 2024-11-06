@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
-import { projects } from "../../data/dataProjet";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faLinkSlash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { projects } from "../../data/dataProjet";
 
 const icon = {
   link: <FontAwesomeIcon icon={faLink} />,
@@ -19,6 +19,8 @@ const CardProject = () => {
     "css",
     "scss",
     "javascript",
+    "typescript",
+    "tailwind",
     "react",
     "vue.js",
     "node.js",

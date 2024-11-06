@@ -162,4 +162,20 @@ export const projects = [
       [2024, 8, 31]
     ),
   },
+  {
+    id: 13,
+    name: "Mini Projet CheckMeals",
+    description:
+      "Ce mini projet est un site qui permet à l'utilisateur de rechercher des recettes de cuisine en fonction de la catégorie du plat recherché.",
+    technologies: ["html", "tailwind", "typescript", "react"],
+    image: require("../assets/projects/img-projet/CheckMeals.png"),
+    alt: "Image CheckMeals",
+    video: require("../assets/projects/video-projet/checkMeals.mp4"),
+    url: "https://melvunx.github.io/Cooking-App/",
+    date: new Calendar(
+      "Dates Mini projet CheckMeals",
+      [2024, 10, 10],
+      [2024, 10, 16]
+    ),
+  },
 ];

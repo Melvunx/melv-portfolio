@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
-import AnimatedBg from "../components/AnimatedBg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIdCard, faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import { faFilePdf, faIdCard } from "@fortawesome/free-regular-svg-icons";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from "react";
+import AnimatedBg from "../components/AnimatedBg";
+import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 const icon = {
   idCard: <FontAwesomeIcon icon={faIdCard} />,
@@ -80,8 +80,8 @@ const Home = () => {
                 </button>
               </a>
               <a
-                href="Melvin-Augustine-CV.pdf"
-                download="Melvin-Augustine-CV.pdf"
+                href="Cv-Melvin-Augustine-Nov.pdf"
+                download="Cv-Melvin-Augustine-Nov.pdf"
               >
                 <button
                   id="btn-cv"
