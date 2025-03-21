@@ -1,25 +1,42 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Experience from "./pages/Experience";
+import Formation from "./pages/Formation";
 import Home from "./pages/Home";
 import Projet from "./pages/Projet";
-import Formation from "./pages/Formation";
-import Experience from "./pages/Experience";
 import "./styles/index.scss";
 
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/experience",
+        element: <Experience />,
+      },
+      {
+        path: "/formation",
+        element: <Formation />,
+      },
+      {
+        path: "/projet",
+        element: <Projet />,
+      },
+      {
+        path: "*",
+        element: <Home />,
+      },
+    ],
+  },
+]);
+
 const App = () => {
-  return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projet" element={<Projet />} />
-          <Route path="/formation" element={<Formation />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

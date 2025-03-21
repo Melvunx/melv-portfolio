@@ -3,8 +3,6 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import AnimatedBg from "../components/AnimatedBg";
-import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
 
 const icon = {
   idCard: <FontAwesomeIcon icon={faIdCard} />,
@@ -54,8 +52,7 @@ const Home = () => {
   }, [scrollLevel]);
 
   return (
-    <div>
-      <Navigation />
+    <>
       <AnimatedBg />
       <main id="main">
         <div className="warning">
@@ -271,8 +268,7 @@ const Home = () => {
           </div>
         </div>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 };
 

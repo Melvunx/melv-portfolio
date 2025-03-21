@@ -1,4 +1,4 @@
-import { Calendar } from "../assets/class/Calendar";
+import { Calendar } from "../components/lib/utils";
 
 export const projects = [
   {

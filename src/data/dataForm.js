@@ -1,4 +1,5 @@
-import { Calendar } from "../assets/class/Calendar";
+import { Calendar } from "../components/lib/utils";
+
 
 const formations = [
   {
