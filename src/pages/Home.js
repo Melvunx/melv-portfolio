@@ -17,7 +17,7 @@ const information = [
   {
     objectif: "Recherche d'une alternance en informatique",
     delay: "12 mois",
-    rythme: "3 semaines en entreprise et 1 en formation",
+    rythme: "3 semaines en entreprise et 1 semaine en formation",
     sectors: ["Industrie", "Banque", "Conseil"],
     localisation: "Île-de-France",
   },
