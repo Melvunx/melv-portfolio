@@ -27,6 +27,45 @@ main {
     }
   }
 
+  .warning {
+    border: 2px $colorB solid;
+    border-radius: 8px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: 2rem auto;
+    background-color: $colorCard;
+    box-shadow: $boxShadowCard;
+
+    .left-warning {
+      @include flexContainer;
+    }
+
+    .right-warning {
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      line-height: 1.8rem;
+      font-size: 1.1rem;
+
+      p > span:first-of-type {
+        font-weight: bold;
+      }
+
+      p > span:last-of-type {
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: underline;
+      }
+
+      .link-next-project {
+        color: rgb(233, 160, 24);
+        font-style: italic;
+      }
+    }
+  }
+
   .infos {
     display: grid;
     grid-gap: 10px;
@@ -60,7 +99,6 @@ main {
 
       @media screen and (max-width: 900px) {
         padding-bottom: 100px;
-
       }
 
       img {
@@ -77,7 +115,6 @@ main {
 
       .btn-container {
         a {
-
           button#btn-contact,
           button#btn-cv {
             @include flexContainer;

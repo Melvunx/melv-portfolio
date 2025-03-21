@@ -17,7 +17,7 @@ const information = [
   {
     objectif: "Recherche d'une alternance en informatique",
     delay: "12 mois",
-    rythme: "4 jours en entreprise et 1 jour de formation",
+    rythme: "3 semaines en entreprise et 1 en formation",
     sectors: ["Industrie", "Banque", "Conseil"],
     localisation: "Île-de-France",
   },
@@ -58,6 +58,26 @@ const Home = () => {
       <Navigation />
       <AnimatedBg />
       <main id="main">
+        <div className="warning">
+          <div className="left-warning">
+            <h1>⚠️Attention⚠️</h1>
+          </div>
+          <div className="right-warning">
+            <p>
+              Je prépare une mise à jour complète de mon portfolio en utilisant{" "}
+              <span>NextJs</span> . Avec de{" "}
+              <span>nouvelles fonctionnalitées dynamiques</span> pour vous
+              montrer l'évolution de mon travail ! <br />
+              Pour voir les progressions de mon application, rendez-vous sur mon{" "}
+              <a
+                href="https://github.com/Melvunx/next-portfolio"
+                className="link-next-project"
+              >
+                Github !
+              </a>
+            </p>
+          </div>
+        </div>
         <h2>
           Bienvenue sur mon portfolio{" "}
           <span className="fa-icon">{icon.idCard}</span>
@@ -80,8 +100,8 @@ const Home = () => {
                 </button>
               </a>
               <a
-                href="Cv-Melvin-Augustine-Nov.pdf"
-                download="Cv-Melvin-Augustine-Nov.pdf"
+                href="Cv-Augustine-Melvin.pdf"
+                download="Cv-Augustine-Melvin.pdf"
               >
                 <button
                   id="btn-cv"
@@ -103,7 +123,7 @@ const Home = () => {
             >
               <h3 className="bubble-title">Qui suis-je ?</h3>
               <p>
-                Je m'appelle Melvin, actuellement en formation sur{" "}
+                Je m'appelle Melvin, actuellement inscrit à l'école{" "}
                 <span
                   className={
                     isIntroHovering
@@ -111,13 +131,13 @@ const Home = () => {
                       : "open-classrooms-out"
                   }
                 >
-                  OpenClassrooms
+                  ETNA à Paris
                 </span>{" "}
-                pour obtenir une L3{" "}
+                pour obtenir un diplome de{" "}
                 <span
                   className={isIntroHovering ? "diplome-in" : "diplome-out"}
                 >
-                  Développeur-Concepteur d'Applications
+                  Concepteur Développeur D'application
                 </span>
                 .
               </p>
